@@ -14,7 +14,17 @@ public class MulThread01 {
         // 2.实现runnable接口，实现run方法
 //        implRunnable();
         // 3.实现callable接口
-        implCallable();
+//        implCallable();
+        // 获取默认名字优先级
+        Thread t1 = new MyThread1();
+        System.out.println("默认");
+        System.out.println(t1.getName());
+        System.out.println(t1.getPriority());
+        // 获取主线程名字与优先级
+        Thread main = Thread.currentThread();
+        System.out.println("主线程");
+        System.out.println(main.getName());
+        System.out.println(main.getPriority());
     }
     // 1.继承thread类
     public static void extendsThread(){
